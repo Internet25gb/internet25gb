@@ -9,81 +9,88 @@
 body{
   margin:0;
   font-family: Arial, sans-serif;
-  background:#f2b56b url('https://i.imgur.com/4M7IWwP.png') repeat;
+  background:url('file_0000000f2147207a86bda5da9246f61.png') no-repeat center center fixed;
+  background-size:cover;
 }
-.wrapper{
-  max-width:380px;
-  margin:20px auto;
-  background:#fff;
+
+.container{
+  max-width:360px;
+  margin:40px auto;
+  background:#ffffff;
+  padding:20px;
   border-radius:10px;
-  padding:15px;
   text-align:center;
-  box-shadow:0 0 10px rgba(0,0,0,.3);
+  box-shadow:0 0 15px rgba(0,0,0,.4);
 }
-h2{color:#000;font-size:18px;}
+
+h2{
+  margin:0 0 10px;
+  font-size:20px;
+}
+
+p{
+  font-size:14px;
+}
+
 .timer{
-  color:red;
+  color:#d60000;
   font-weight:bold;
-  margin:10px 0;
+  font-size:18px;
+  margin:10px 0 15px;
 }
+
 .btn{
   display:block;
-  margin:8px 0;
   padding:12px;
+  margin:8px 0;
   color:#fff;
   text-decoration:none;
+  border-radius:8px;
   font-weight:bold;
-  border-radius:6px;
+  font-size:14px;
 }
-.bl{background:#4CAF50;}
+
+.bl{background:#4caf50;}
 .gp{background:#0d47a1;}
 .robi{background:#b71c1c;}
 .airtel{background:#e91e63;}
-.footer{
-  font-size:12px;
+
+small{
   color:#555;
-  margin-top:10px;
+  font-size:12px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="wrapper">
-  <h2>সীমিত সময়ের জন্য বিশেষ অফার</h2>
+<div class="container">
+  <h2>সীমিত সময়ের জন্য বিশেষ অফার</h2>
   <p>আজই সংগ্রহ করুন আপনার জন্য ফ্রি ইন্টারনেট</p>
 
   <div class="timer" id="timer">00 : 30 : 00</div>
 
-  <!-- Affiliate Links -->
-  <a href="https://your-affiliate-link.com" target="_blank" class="btn bl">
-    বাংলালিংক ২৫ জিবি ফ্রি ইন্টারনেট
-  </a>
+  <a class="btn bl" href="https://fpqlxdu.com/cl/03dfbc5e731c26e2">বাংলালিংক ২৫ জিবি ফ্রি ইন্টারনেট</a>
+  <a class="btn gp" href="https://fpqlxdu.com/cl/41bc73b46a4c3d28">গ্রামীণফোন ২৫ জিবি ফ্রি ইন্টারনেট</a>
+  <a class="btn robi" href="https://fpqlxdu.com/cl/03dfbc5e731c26e2">রবি ২৫ জিবি ফ্রি ইন্টারনেট</a>
+  <a class="btn airtel" href="https://fpqlxdu.com/cl/2e757d17274efb01">এয়ারটেল ২৫ জিবি ফ্রি ইন্টারনেট</a>
 
-  <a href="https://your-affiliate-link.com" target="_blank" class="btn gp">
-    গ্রামীণফোন ২৫ জিবি ফ্রি ইন্টারনেট
-  </a>
-
-  <a href="https://your-affiliate-link.com" target="_blank" class="btn robi">
-    রবি ২৫ জিবি ফ্রি ইন্টারনেট
-  </a>
-
-  <a href="https://your-affiliate-link.com" target="_blank" class="btn airtel">
-    এয়ারটেল ২৫ জিবি ফ্রি ইন্টারনেট
-  </a>
-
-  <div class="footer">
-    * শর্ত প্রযোজ্য। অফার সীমিত সময়ের জন্য।
-  </div>
+  <small>* শর্ত প্রযোজ্য। অফার সীমিত সময়ের জন্য।</small>
 </div>
 
 <script>
-let time = 1800; // 30 minutes demo
+let time = 1800; // 30 minutes
+
 setInterval(() => {
   let m = Math.floor(time / 60);
   let s = time % 60;
+
   document.getElementById("timer").innerHTML =
-    "00 : " + String(m).padStart(2,'0') + " : " + String(s).padStart(2,'0');
+    "00 : " +
+    String(m).padStart(2, "0") +
+    " : " +
+    String(s).padStart(2, "0");
+
   if(time > 0) time--;
 }, 1000);
 </script>
