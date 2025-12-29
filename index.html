@@ -1,70 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Internet25GB Offer</title>
+<title>Special Internet Offer</title>
 
 <style>
 body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f5f7fa;
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f2b56b url('https://i.imgur.com/4M7IWwP.png') repeat;
 }
-
 .wrapper{
-    max-width:420px;
-    margin:30px auto;
-    background:#ffffff;
-    border-radius:16px;
-    box-shadow:0 6px 18px rgba(0,0,0,0.12);
-    overflow:hidden;
+  max-width:380px;
+  margin:20px auto;
+  background:#fff;
+  border-radius:10px;
+  padding:15px;
+  text-align:center;
+  box-shadow:0 0 10px rgba(0,0,0,.3);
 }
-
-.header-img img{
-    width:100%;
-    display:block;
+h2{color:#000;font-size:18px;}
+.timer{
+  color:red;
+  font-weight:bold;
+  margin:10px 0;
 }
-
-.content{
-    padding:20px;
-    text-align:center;
+.btn{
+  display:block;
+  margin:8px 0;
+  padding:12px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:6px;
 }
-
-h1{
-    font-size:22px;
-    margin-bottom:10px;
-    color:#222;
-}
-
-p{
-    font-size:14px;
-    color:#555;
-    line-height:1.6;
-}
-
-.button{
-    display:block;
-    margin:20px 0;
-    padding:14px;
-    background:#22c55e;
-    color:#ffffff;
-    font-size:18px;
-    font-weight:bold;
-    text-decoration:none;
-    border-radius:30px;
-}
-
-.note{
-    font-size:12px;
-    color:#888;
-}
-
+.bl{background:#4CAF50;}
+.gp{background:#0d47a1;}
+.robi{background:#b71c1c;}
+.airtel{background:#e91e63;}
 .footer{
-    text-align:center;
-    font-size:12px;
-    color:#aaa;
-    padding:15px;
+  font-size:12px;
+  color:#555;
+  margin-top:10px;
 }
 </style>
 </head>
@@ -72,35 +50,43 @@ p{
 <body>
 
 <div class="wrapper">
+  <h2>সীমিত সময়ের জন্য বিশেষ অফার</h2>
+  <p>আজই সংগ্রহ করুন আপনার জন্য ফ্রি ইন্টারনেট</p>
 
-    <!-- IMAGE -->
-    <div class="header-img">
-        <img src="IMG_20251228_034231_286.jpg" alt="Internet Offer">
-    </div>
+  <div class="timer" id="timer">00 : 30 : 00</div>
 
-    <div class="content">
-        <h1>🎁 Special Internet Bonus</h1>
+  <!-- Affiliate Links -->
+  <a href="https://your-affiliate-link.com" target="_blank" class="btn bl">
+    বাংলালিংক ২৫ জিবি ফ্রি ইন্টারনেট
+  </a>
 
-        <p>
-            Limited-time promotional internet bonus offer.  
-            Availability may vary depending on location and network.
-        </p>
+  <a href="https://your-affiliate-link.com" target="_blank" class="btn gp">
+    গ্রামীণফোন ২৫ জিবি ফ্রি ইন্টারনেট
+  </a>
 
-        <a class="button" href="https://fpqlxdu.com/cl/f013d8eb418391f5">
-            Learn More
-        </a>
+  <a href="https://your-affiliate-link.com" target="_blank" class="btn robi">
+    রবি ২৫ জিবি ফ্রি ইন্টারনেট
+  </a>
 
-        <div class="note">
-            *This is a promotional landing page.  
-            Terms & conditions may apply.
-        </div>
-    </div>
+  <a href="https://your-affiliate-link.com" target="_blank" class="btn airtel">
+    এয়ারটেল ২৫ জিবি ফ্রি ইন্টারনেট
+  </a>
 
-    <div class="footer">
-        © 2025 Internet25GB
-    </div>
-
+  <div class="footer">
+    * শর্ত প্রযোজ্য। অফার সীমিত সময়ের জন্য।
+  </div>
 </div>
+
+<script>
+let time = 1800; // 30 minutes demo
+setInterval(() => {
+  let m = Math.floor(time / 60);
+  let s = time % 60;
+  document.getElementById("timer").innerHTML =
+    "00 : " + String(m).padStart(2,'0') + " : " + String(s).padStart(2,'0');
+  if(time > 0) time--;
+}, 1000);
+</script>
 
 </body>
 </html>
