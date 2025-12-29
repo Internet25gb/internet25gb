@@ -1,99 +1,121 @@
 <!DOCTYPE html>
 <html lang="bn">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Special Internet Offer</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>২৫ জিবি ফ্রি ইন্টারনেট</title>
 
-<style>
-body{
-  margin:0;
-  font-family: Arial, sans-serif;
-  background:url('file_0000000f2147207a86bda5da9246f61.png') no-repeat center center fixed;
-  background-size:cover;
-}
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: url("bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
 
-.container{
-  max-width:360px;
-  margin:40px auto;
-  background:#ffffff;
-  padding:20px;
-  border-radius:10px;
-  text-align:center;
-  box-shadow:0 0 15px rgba(0,0,0,.4);
-}
+    .overlay {
+      min-height: 100vh;
+      background: rgba(255,255,255,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-h2{
-  margin:0 0 10px;
-  font-size:20px;
-}
+    .card {
+      width: 90%;
+      max-width: 420px;
+      background: #fff;
+      border-radius: 16px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      text-align: center;
+    }
 
-p{
-  font-size:14px;
-}
+    h1 {
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
 
-.timer{
-  color:#d60000;
-  font-weight:bold;
-  font-size:18px;
-  margin:10px 0 15px;
-}
+    .timer {
+      font-size: 26px;
+      font-weight: bold;
+      color: red;
+      margin: 15px 0;
+    }
 
-.btn{
-  display:block;
-  padding:12px;
-  margin:8px 0;
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
-  font-size:14px;
-}
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 14px;
+      margin: 10px 0;
+      font-size: 16px;
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
 
-.bl{background:#4caf50;}
-.gp{background:#0d47a1;}
-.robi{background:#b71c1c;}
-.airtel{background:#e91e63;}
+    .gp { background: #2ecc71; }
+    .bl { background: #2980b9; }
+    .robi { background: #c0392b; }
+    .airtel { background: #e91e63; }
 
-small{
-  color:#555;
-  font-size:12px;
-}
-</style>
+    .note {
+      font-size: 12px;
+      color: #555;
+      margin-top: 10px;
+    }
+  </style>
 </head>
 
 <body>
+  <div class="overlay">
+    <div class="card">
 
-<div class="container">
-  <h2>সীমিত সময়ের জন্য বিশেষ অফার</h2>
-  <p>আজই সংগ্রহ করুন আপনার জন্য ফ্রি ইন্টারনেট</p>
+      <h1>সীমিত সময়ের জন্য বিশেষ অফার</h1>
+      <p>আজই সংগ্রহ করুন আপনার জন্য ফ্রি ইন্টারনেট</p>
 
-  <div class="timer" id="timer">00 : 30 : 00</div>
+      <div class="timer" id="timer">00:30:00</div>
 
-  <a class="btn bl" href="https://fpqlxdu.com/cl/03dfbc5e731c26e2">বাংলালিংক ২৫ জিবি ফ্রি ইন্টারনেট</a>
-  <a class="btn gp" href="https://fpqlxdu.com/cl/41bc73b46a4c3d28">গ্রামীণফোন ২৫ জিবি ফ্রি ইন্টারনেট</a>
-  <a class="btn robi" href="https://fpqlxdu.com/cl/03dfbc5e731c26e2">রবি ২৫ জিবি ফ্রি ইন্টারনেট</a>
-  <a class="btn airtel" href="https://fpqlxdu.com/cl/2e757d17274efb01">এয়ারটেল ২৫ জিবি ফ্রি ইন্টারনেট</a>
+      <!-- BUTTONS -->
+      <a class="btn gp" href="https://fpqlxdu.com/cl/41bc73b46a4c3d28">
+        গ্রামীণফোন ২৫ জিবি ফ্রি ইন্টারনেট
+      </a>
 
-  <small>* শর্ত প্রযোজ্য। অফার সীমিত সময়ের জন্য।</small>
-</div>
+      <a class="btn bl" href="https://fpqlxdu.com/cl/03dfbc5e731c26e2">
+        বাংলালিংক ২৫ জিবি ফ্রি ইন্টারনেট
+      </a>
 
-<script>
-let time = 1800; // 30 minutes
+      <a class="btn robi" href="https://fpqlxdu.com/cl/03dfbc5e731c26e2">
+        রবি ২৫ জিবি ফ্রি ইন্টারনেট
+      </a>
 
-setInterval(() => {
-  let m = Math.floor(time / 60);
-  let s = time % 60;
+      <a class="btn airtel" href="https://fpqlxdu.com/cl/2e757d17274efb01">
+        এয়ারটেল ২৫ জিবি ফ্রি ইন্টারনেট
+      </a>
 
-  document.getElementById("timer").innerHTML =
-    "00 : " +
-    String(m).padStart(2, "0") +
-    " : " +
-    String(s).padStart(2, "0");
+      <div class="note">
+        * শর্ত প্রযোজ্য। অফার সীমিত সময়ের জন্য।
+      </div>
 
-  if(time > 0) time--;
-}, 1000);
-</script>
+    </div>
+  </div>
+
+  <script>
+    let time = 1800;
+    const timer = document.getElementById("timer");
+
+    setInterval(() => {
+      let m = Math.floor(time / 60);
+      let s = time % 60;
+      timer.innerHTML =
+        "00:" +
+        String(m).padStart(2, "0") +
+        ":" +
+        String(s).padStart(2, "0");
+      if (time > 0) time--;
+    }, 1000);
+  </script>
 
 </body>
 </html>
