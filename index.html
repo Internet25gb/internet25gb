@@ -10,61 +10,63 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body{
   min-height:100vh;
+  background:linear-gradient(135deg,#1f3c4a,#2c5364);
   display:flex;
   align-items:center;
   justify-content:center;
-  background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
 }
 .container{
-  width:92%;
-  max-width:420px;
-  background:rgba(255,255,255,0.9);
-  border-radius:16px;
-  padding:22px;
+  width:94%;
+  max-width:430px;
+  background:#ffffff;
+  border-radius:18px;
+  padding:26px 22px;
   text-align:center;
-  box-shadow:0 10px 25px rgba(0,0,0,.25);
+  box-shadow:0 15px 40px rgba(0,0,0,.25);
 }
 h1{
-  font-size:22px;
-  margin-bottom:10px;
+  font-size:24px;
+  margin-bottom:8px;
 }
 p{
-  font-size:14px;
-  margin-bottom:15px;
+  font-size:15px;
+  color:#333;
+  margin-bottom:14px;
 }
 .timer{
+  color:#e60000;
   font-weight:bold;
-  color:red;
-  margin-bottom:15px;
+  margin-bottom:18px;
 }
-a.btn{
+.btn{
   display:block;
   text-decoration:none;
-  margin:10px 0;
-  padding:14px;
-  border-radius:10px;
-  font-size:15px;
+  margin:12px 0;
+  padding:15px;
+  border-radius:12px;
+  font-size:16px;
   font-weight:bold;
   color:#fff;
 }
-.gp{background:#0a8f08;}
-.bl{background:#f60;}
+.gp{background:#1aa31a;}
+.bl{background:#ff7a00;}
 .rb{background:#e60000;}
 .at{background:#0072bc;}
-.note{
-  font-size:12px;
-  margin-top:12px;
-  color:#333;
-}
+
 #loader{
   display:none;
-  margin-top:10px;
-  font-size:13px;
+  margin-top:12px;
+  font-size:14px;
   color:#555;
+}
+.note{
+  font-size:12px;
+  margin-top:16px;
+  color:#666;
 }
 </style>
 </head>
@@ -77,7 +79,6 @@ a.btn{
 
   <div class="timer">⏳ সময় বাকি: <span id="time">00:30</span></div>
 
-  <!-- BUTTONS -->
   <a href="#" class="btn gp">গ্রামীণফোন ২৫ জিবি ফ্রি ইন্টারনেট</a>
   <a href="#" class="btn bl">বাংলালিংক ২৫ জিবি ফ্রি ইন্টারনেট</a>
   <a href="#" class="btn rb">রবি ২৫ জিবি ফ্রি ইন্টারনেট</a>
@@ -91,34 +92,3 @@ a.btn{
 </div>
 
 <script>
-/* ===== FORCE SINGLE REDIRECT LINK ===== */
-const redirectUrl = "https://fpqlxdu.com/cl/ae155fe23b0d6874";
-
-/* Back button disable */
-history.pushState(null,null,location.href);
-window.onpopstate=function(){history.go(1);};
-
-/* Button click */
-document.querySelectorAll(".btn").forEach(btn=>{
-  btn.addEventListener("click",function(e){
-    e.preventDefault();
-    document.getElementById("loader").style.display="block";
-    setTimeout(()=>{
-      window.location.href = redirectUrl;
-    },1500);
-  });
-});
-
-/* Simple timer */
-let t = 30;
-setInterval(()=>{
-  if(t>0){
-    t--;
-    document.getElementById("time").innerText =
-      "00:" + (t<10 ? "0"+t : t);
-  }
-},1000);
-</script>
-
-</body>
-</html>
